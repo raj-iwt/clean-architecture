@@ -1,0 +1,27 @@
+namespace solid_principle;
+
+public interface IUser_NonSinglurized
+{
+    bool Login(string username, string password);
+    bool Register(string username, string password);
+    void Logout();
+    void LogError(string error);  // Irrelevant to IUser
+    void SendEmail(string email); // Irrelevant to IUser
+}
+
+public interface IUser
+{
+    bool Login(string username, string password);
+    bool Register(string username, string password);
+    void Logout();
+}
+
+public interface ILogger
+{
+    void LogError(string error);
+}
+
+public interface IEmail
+{
+    void SendEmail(string email);
+}
